@@ -1,44 +1,26 @@
 :root {
-	--brdr: 2px solid darkcyan;
-    --ac: #dad;
+	--brdr: 3px solid darkcyan;
     --bg1: #090909;
     --bg2: #151515;
-    --bg3: #445;
-    --hi: #000;
-    --fg: #fee;
-    --fg2: #88a;
-    --sh: #fff;
-    --sh1: rgba(255 255 255 / 0%);
-    --sh2: rgba(255 255 255 / 75%);
 }
+
+
 html{
 	background: var(--bg1);
 	color: white;
-	font-family: sans-serif;
+	font-family: sans serif;
 	max-width: 640px;
-	border-left: var(--brdr);
-	border-right: var(--brdr);
 	margin-left: auto;
 	margin-right: auto;
 }
 
-header{
-	border-bottom: var(--brdr);
-}
-header h1{font-size: 30pt;}
-h1{color: cyan; text-align: center;}
-h2, h3{color: cyan}
-header nav{
-	border-top: var(--brdr);
-	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
 
 body{
 	background: var(--bg2);
 	margin-left: auto;
 	margin-right: auto;
+	border-left: var(--brdr);
+	border-right: var(--brdr);
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -49,14 +31,43 @@ body p{
 body a:link{color: cyan;}
 body a:visited{color: darkcyan;}
 
+
+header h1{font-size: 30pt;}
+h1, h2{color: cyan; text-align: center;}
+h3{color: cyan}
+header nav{
+	border-top: var(--brdr);
+	border-bottom: var(--brdr);
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+nav a{
+		padding-left: 10px;
+		padding-right: 10px;
+}
+
+div.box{
+	background: var(--bg1);
+	border: var(--brdr);
+}
+div.scrollbox{
+	background: var(--bg1);
+	border: var(--brdr);
+	
+	padding: 10px;
+	overflow-y: scroll;
+	word-wrap: break-word;
+}
+div#updates{
+	width: 300px;
+	height: 200px;
+	margin: 20px auto;
+}
+
 footer{border-top: var(--brdr);}
-.centerimg{
+img.centerimg{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-.rainbowtext{
-	background-image: repeating-linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-	-webkit-background-clip: text;
-	color: transparent;
 }
