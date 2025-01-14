@@ -17,15 +17,19 @@ html{
 
 body{
 	background: var(--bg2);
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 	border-left: var(--brdr);
 	border-right: var(--brdr);
 	padding-bottom: 0px;
 }
 body p{
+	margin: auto;
 	padding-right: 10px;
 	padding-left: 10px;
+}
+body footer p{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 body a:link, a:visited{
     color: cyan;
