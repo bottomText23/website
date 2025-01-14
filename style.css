@@ -104,6 +104,8 @@ hr.styled{
 
 .art-container p{
 	text-align: center;
+    margin top: 10px;
+    margin-bottom: 10px;
 }
 
 .art-container img{
