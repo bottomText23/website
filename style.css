@@ -22,23 +22,29 @@ body{
 	border-right: var(--brdr);
 	padding-bottom: 0px;
 }
+
 body p{
 	margin: auto;
 	padding-right: 10px;
 	padding-left: 10px;
 }
+
 body footer p{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 body a:link, a:visited{
     color: cyan;
     text-decoration: none;
 }
 
 header h1{font-size: 30pt;}
+
 h1, h2{color: cyan; text-align: center;}
+
 h3{color: white}
+
 header nav{
 	/*border-top: var(--brdr);*/
 	border-bottom: var(--brdr);
@@ -46,28 +52,10 @@ header nav{
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+
 nav a{
 	padding-left: 10px;
 	padding-right: 10px;
-}
-
-div.box{
-	background: var(--bg1);
-	border: var(--brdr);
-}
-div.scrollbox{
-	background: var(--bg1);
-	border: var(--brdr);
-	
-	padding: 10px;
-	overflow-y: scroll;
-	word-wrap: break-word;
-}
-
-div#updates{
-	width: 300px;
-	height: 200px;
-	margin: 20px auto;
 }
 
 footer{border-top: var(--brdr);}
@@ -84,33 +72,104 @@ hr.styled{
     background-color: darkcyan;
 }
 
+.updates{
+    display: grid;
+    grid-template-rows: auto 449.06px 186.39px; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "uh fh"
+        "s i"
+        "s m";
+    
+    grid-auto-flow: column;
+    align-items: stretch;
+    grid-gap: 10px 10px; /*rows columns*/
+    
+    margin: 10px;
+}
+
+@media (max-width: 600px){
+    .updates{
+        grid-template-rows: auto 300px auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "uh"
+            "s"
+            "fh"
+            "i"
+            "m"
+    }
+}
+
+
 .row{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
     margin-left: 10px;
     margin-right: 10px;
+    height: 100%;
 }
+
 .column{
-    flex: 50%;
+    display: flex;
+    flex-direction: column; /*display flexible items vertically*/
+    align-items: stretch;
+    
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.box{
+	background: var(--bg1);
+	border: var(--brdr);
+}
+
+.up-head{
+    grid-area: uh;
+}
+
+.feat-head{
+    grid-area: fh;
+}
+
+.scrollbox{
+    grid-area: s;
+    background: var(--bg1);
+    border: var(--brdr);
+	
+    padding: 10px;
+    max-height: 100%;
+   
+    overflow-y: auto; /*allows for scrolling if content exedes height*/
+}
+
+.featured-image{
+    grid-area: i;
+}
+
+.message-box{
+    grid-area: m;
+    padding: 10px;
 }
 
 
 /*gallery*/
 
-.art-container{
-    float: left;
+.art-container{ /*meant as a column class*/
+    float: left; /*positions children on the left*/
+    
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .art-container p{
-	text-align: center;
+    text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .art-container img{
-    display: block;
-	margin-left: auto;
-	margin-right: auto;
-    border: var(--brdr);
+    margin-left: auto;
+    margin-right: auto;
 }
