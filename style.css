@@ -74,12 +74,11 @@ hr.styled{
 
 .updates{
     display: grid;
-    grid-template-rows: auto 449.06px 186.39px; 
+    grid-template-rows: auto 449.06px; 
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "uh fh"
-        "s i"
-        "s m";
+        "s i";
     
     grid-auto-flow: column;
     align-items: stretch;
@@ -90,35 +89,16 @@ hr.styled{
 
 @media (max-width: 600px){
     .updates{
-        grid-template-rows: auto 300px auto auto auto;
+        grid-template-rows: auto 300px auto auto;
         grid-template-columns: 1fr;
         grid-template-areas:
             "uh"
             "s"
             "fh"
             "i"
-            "m"
     }
 }
 
-
-.row{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 100%;
-}
-
-.column{
-    display: flex;
-    flex-direction: column; /*display flexible items vertically*/
-    align-items: stretch;
-    
-    padding-left: 10px;
-    padding-right: 10px;
-}
 
 .box{
 	background: var(--bg1);
@@ -148,19 +128,24 @@ hr.styled{
     grid-area: i;
 }
 
-.message-box{
-    grid-area: m;
-    padding: 10px;
+
+/*text*/
+article.long-text p{
+    margin-bottom: 10px;
 }
 
 
 /*gallery*/
 
-.art-container{ /*meant as a column class*/
-    float: left; /*positions children on the left*/
+.gallery{
+    display: grid;
+    grid-template-rows: auto; 
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    grid-auto-flow: row;
+    grid-gap: 10px 10px; /*rows columns*/
+    align-items: center;
     
-    padding-left: 10px;
-    padding-right: 10px;
+    margin: 10px;
 }
 
 .art-container p{
@@ -170,6 +155,11 @@ hr.styled{
 }
 
 .art-container img{
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.art-container img:hover{
+    transform: scale(1.05);
 }
