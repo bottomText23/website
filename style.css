@@ -44,9 +44,15 @@ body a:hover{
     text-decoration: underline solid;
 }
 
-header h1{font-size: 30pt;}
+header h1{font-size: 30pt; text-align: center;}
 
-h1, h2{color: cyan; text-align: center;}
+h1, h2{color: cyan;}
+
+h1.side, h2{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+}
 
 h3{color: white}
 
