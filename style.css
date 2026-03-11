@@ -85,7 +85,7 @@ hr.styled{
 
 .updates{
     display: grid;
-    grid-template-rows: auto 483px; 
+    grid-template-rows: auto 500px; 
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "uh fh"
