@@ -2,6 +2,7 @@
 	--brdr: 3px solid darkcyan;
     --bg1: #090909;
     --bg2: #151515;
+    --uwsize: auto 504px;
 }
 
 
@@ -85,7 +86,7 @@ hr.styled{
 
 .updates{
     display: grid;
-    grid-template-rows: auto 500px; 
+    grid-template-rows: var(--uwsize); 
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "uh fh"
